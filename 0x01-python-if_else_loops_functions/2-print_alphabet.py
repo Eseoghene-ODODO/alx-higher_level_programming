@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-print(f"abcdefghijklmnopqrstuvwxyz")
+print("{0}bcdefghijklmnopqrstuvwxyz".format("a"))
