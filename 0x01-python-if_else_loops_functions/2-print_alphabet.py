@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("{0}bcdefghijklmnopqrstuvwxyz".format("a"))
+for i in range(97, 123):
+    print(chr(i).format(), end="")
