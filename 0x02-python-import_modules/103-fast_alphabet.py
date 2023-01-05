@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 import string
-print(string.ascii.uppercase)
+print(string.ascii.uppercase[:27])
