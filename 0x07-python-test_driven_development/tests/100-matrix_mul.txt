@@ -1,0 +1,131 @@
+The ``100-matrix_mul`` module
+======================
+
+Using ``matrix_mul``
+--------------------
+
+Importing the function from the module:
+        >>> matrix_mul = __import__("100-matrix_mul").matrix_mul
+
+Checking regular case
+        >>> m_a = [[2, 7], [1, 10], [12, 2]]
+        >>> m_b = [[2, 4], [6, 8]]
+        >>> matrix_mul(m_a, m_b)
+        [[46, 64], [62, 84], [36, 64]]
+
+Checking matrix with one element
+        >>> m_a = [[2]]
+        >>> m_b = [[67]]
+        >>> matrix_mul(m_a, m_b)
+        [[134]]
+
+Checking can't be multiplied
+        >>> m_a = [[2, 7, 4], [1, 10, 100]]
+        >>> m_b = [[2, 4], [6, 8]]
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        ValueError: m_a and m_b can't be multiplied
+
+Checking m_a string element
+        >>> m_a = [[2, 7], "holberton", [12, 2]]
+        >>> m_b = [[2, 4], [6, 8]]
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        TypeError: m_a must be a list of lists
+
+Checking m_b string element
+        >>> m_a = [[2, 7], [[37, 56]], [12, 2]]
+        >>> m_b = [[2, 4], "holberton"]
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        TypeError: m_b must be a list of lists
+
+Checking m_a list with string element
+        >>> m_a = [[2, 7], ["holberton"], [12, 2]]
+        >>> m_b = [[2, 4], [6, 8]]
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        TypeError: m_a should contain only integers or floats
+
+Checking m_b list with string element
+        >>> m_a = [[2, 7], [37, 56], [12, 2]]
+        >>> m_b = [[2, 4], ["holberton"]]
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        TypeError: m_b should contain only integers or floats
+
+Checking m_a is tuple of lists
+        >>> m_a = ([2, 7], [12, 2])
+        >>> m_b = [[2, 4], [6, 8]]
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        TypeError: m_a must be a list
+
+
+Checking m_b is tuple of lists
+        >>> m_a = [[2, 7], [12, 2]]
+        >>> m_b = ([2, 4], [6, 8])
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        TypeError: m_b must be a list
+
+Checking m_a is list of list empty
+        >>> m_a = [[]]
+        >>> m_b = [[2, 4], [6, 8]]
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        ValueError: m_a can't be empty
+
+Checking m_b is list of list empty
+        >>> m_a = [[2, 4], [6, 8]]
+        >>> m_b = [[]]
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        ValueError: m_b can't be empty
+
+Checking m_a rows with different size
+        >>> m_a = [[2, 4], [6]]
+        >>> m_b = [[2, 4], [6, 8]]
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        TypeError: each row of m_a must be of the same size
+
+Checking m_b rows with different size
+        >>> m_a = [[2, 4], [6, 6]]
+        >>> m_b = [[2, 4], [6, 8, 9]]
+        >>> matrix_mul(m_a, m_b)
+        Traceback (most recent call last):
+        ...
+        TypeError: each row of m_b must be of the same size
+
+Checking without arguments
+        >>> matrix_mul()
+        Traceback (most recent call last):
+        ...
+        TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+Checking with m_b argument missing
+        >>> m_a = [[2, 4], [6, 6]]
+        >>> matrix_mul(m_a)
+        Traceback (most recent call last):
+        ...
+        TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+Checking with more than 2 arguments
+        >>> m_a = [[2, 4], [6, 6]]
+        >>> m_b = [[2, 4], [6, 8, 9]]
+        >>> m_c = [[78, 5], [89, 1]]
+        >>> matrix_mul(m_a, m_b, m_b)
+        Traceback (most recent call last):
+        ...
+        TypeError: matrix_mul() takes 2 positional arguments but 3 were given

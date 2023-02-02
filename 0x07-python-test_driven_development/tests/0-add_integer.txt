@@ -1,0 +1,104 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+--------------------
+
+Importing the function from the module:
+        >>> add_integer = __import__("0-add_integer").add_integer
+
+Checking regular addition
+        >>> add_integer(2, 3)
+        5
+
+Cheking with one argument
+        >>> add_integer(2)
+        100
+
+Checking default value
+        >>> add_integer(0)
+        98
+
+Checking positive with negative
+        >>> add_integer(2, -3)
+        -1
+
+Checking negative float
+        >>> add_integer(2, -5.3)
+        -3
+
+Checking integer with float
+        >>> add_integer(2, 5.3)
+        7
+
+Checking float with integer
+        >>> add_integer(6.3, 7)
+        13
+
+Checking both float
+        >>> add_integer(3.7, 5.5)
+        8
+
+Checking for too long int numbers
+        >>> add_integer(100000000000000000000000000000000, 999999)
+        100000000000000000000000000999999
+
+Checking number with characters
+        >>> add_integer("hello", 2)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+Checking characters with number
+        >>> add_integer(2, "holberton")
+        Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+
+Checking string of numbers for a
+        >>> add_integer("56677787", 45)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+Checking string of numbers for b
+        >>> add_integer(566, "54664")
+        Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+
+Checking more than two arguments
+        >>> add_integer(5, 7, 2)
+        Traceback (most recent call last):
+        ...
+        TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Checking for passed inf number:
+        >>> add_integer(1, float('inf'))
+        Traceback (most recent call last):
+        ...
+        OverflowError: cannot convert float infinity to integer
+
+Checking bool with number:
+        >>> add_integer(True, 54)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+Checking number with bool:
+        >>> add_integer(78, False)
+        Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+
+Checking bool with bool:
+        >>> add_integer(True, False)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
+Checking for passed NaN:
+        >>> add_integer(3, float('nan'))
+        Traceback (most recent call last):
+        ...
+        ValueError: cannot convert float NaN to integer
