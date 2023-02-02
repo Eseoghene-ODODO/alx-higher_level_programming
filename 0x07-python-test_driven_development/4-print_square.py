@@ -3,6 +3,8 @@
     arg:
     size
 """
+
+
 def print_square(size):
     """function body
         Error types:
