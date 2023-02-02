@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """
+function definition
 2-matrix_divided module
 2-matrix_divided module supplies one function, matrix_divided(matrix, div)
 """
