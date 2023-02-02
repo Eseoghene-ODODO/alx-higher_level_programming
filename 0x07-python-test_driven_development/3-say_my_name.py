@@ -4,6 +4,8 @@
     first_name
     last_name
 """
+
+
 def say_my_name(first_name, last_name=""):
     """condition to check the instance type
         arg type:
