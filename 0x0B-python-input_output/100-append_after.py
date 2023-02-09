@@ -4,10 +4,12 @@
 
 def append_after(filename="", search_string="", new_string=""):
     """append function initialization"""
-
-    with open(filename, "r+", encoding="utf-8") as file_pos:
-        lines = [line for line in file_pos]
-        for idx, line in enumerate(lines):
+    
+    text = ""
+    with open(filename, "r+", encoding="utf-8") as file1:
+        for line in file1:
+            text += line
             if search_string in line:
-                lines.insert(idx+1, new_string)
-            file_pos.writelines(lines)
+                text += new_string
+    with open(filename, "w") as file2:
+        file2.write(text)
