@@ -4,7 +4,7 @@
 
 def append_after(filename="", search_string="", new_string=""):
     """append function initialization"""
-    
+
     text = ""
     with open(filename, "r+", encoding="utf-8") as file1:
         for line in file1:
