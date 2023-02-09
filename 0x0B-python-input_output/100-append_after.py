@@ -10,4 +10,4 @@ def append_after(filename="", search_string="", new_string=""):
         for idx, line in enumerate(lines):
             if search_string in line:
                 lines.insert(idx+1, new_string)
-                file_pos.writelines(lines)
+            file_pos.writelines(lines)
