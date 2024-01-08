@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-Python function to print all integers of a list
+Function that prints integers in an horizontal line
 """
 
 
 def print_list_integer(my_list=[]):
+    """ The function that ptints the content of a list """
     for i in my_list:
         print("{:d}".format(i))
