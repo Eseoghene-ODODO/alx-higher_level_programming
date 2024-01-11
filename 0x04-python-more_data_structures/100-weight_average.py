@@ -5,7 +5,6 @@ A function that returns the weighted average of all integers tuple
 """
 
 
-
 def weight_average(my_list=[]):
     """ Function body """
     if not my_list:
