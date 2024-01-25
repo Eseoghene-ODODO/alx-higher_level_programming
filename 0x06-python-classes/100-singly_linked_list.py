@@ -12,20 +12,24 @@ class Node:
         self.next_node = next_node
 
     @property
+    """ property body """
     def data(self):
         return self.__data
 
     @data.setter
+    """ setter body """
     def data(self, value):
         if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
 
     @property
+    """ property body """
     def next_node(self):
         return self.__next_node
 
     @next_node.setter
+    """ setter body """
     def next_node(self, value):
         if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
@@ -33,12 +37,14 @@ class Node:
 
 
 class SinglyLinkedList:
+    """ class body """
 
     def __init__(self):
-        # Initialize head to None on creation
+        """ Initialize head to None on creation """
         self.head = None
 
     def __str__(self):
+        """ str body """
         values = []
         node = self.head
         # Traverse list and collect string representation of each data
@@ -48,7 +54,7 @@ class SinglyLinkedList:
         return "\n".join(values)
 
     def sorted_insert(self, value):
-        # Create new node with given value
+        """ Create new node with given value """
         new_node = Node(value)
         # Special case for empty list or insert at head
         if self.head is None or self.head.data >= new_node.data:
