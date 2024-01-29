@@ -9,18 +9,18 @@ class Rectangle:
         Rectangle body
     """
     def __init__(self, width=0, height=0):
-        """ initializing the width and height values """
+        """ instance of a class """
         self.__height = height
         self.__width = width
 
     @property
     def width(self):
-        """ retrieving the width property """
+        """ property body """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ setting the the width value """
+        """ setter body """
         if type(value) not in [int]:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -30,12 +30,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """ retrieving height property """
+        """ property body """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ setting the height value and checking for errors """
+        """ setter body """
         if type(value) not in [int]:
             raise TypeError("height must be an integer")
         elif value < 0:
