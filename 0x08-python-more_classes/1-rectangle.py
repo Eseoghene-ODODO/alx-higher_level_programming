@@ -5,9 +5,7 @@ An empty class Rectangle that defines a rectangle
 
 
 class Rectangle:
-    """
-        Rectangle body
-    """
+    """ class body """
     def __init__(self, width=0, height=0):
         """ instance of a class """
         self.__height = height
