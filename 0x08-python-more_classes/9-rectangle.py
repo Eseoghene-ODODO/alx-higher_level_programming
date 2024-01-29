@@ -88,5 +88,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """ square body """
+        """ class method body """
         return cls(size, size)
