@@ -1,0 +1,27 @@
+# 0-add_integer.txt
+
+"""
+This is a doctest for add_integer function
+
+>>> from importlib import import_module
+
+>>> add_integer = import_module('0-add_integer').add_integer
+
+>>> add_integer(1, 2)
+3
+
+>>> add_integer(100, -2)
+98
+
+>>> add_integer(2)
+100
+
+>>> add_integer(100.3, -2)
+98
+
+>>> add_integer(4, "School")
+TypeError: b must be an integer
+
+>>> add_integer(None)
+TypeError: a must be an integer
+"""
