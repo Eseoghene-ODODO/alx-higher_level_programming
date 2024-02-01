@@ -34,4 +34,20 @@ Traceback (most recent call last):
 	...
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
+>>> add_integer(True, 54)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+
+>>> add_integer(78, False)
+        Traceback (most recent call last):
+        ...
+        TypeError: b must be an integer
+
+Checking bool with bool:
+        >>> add_integer(True, False)
+        Traceback (most recent call last):
+        ...
+        TypeError: a must be an integer
+
 """
