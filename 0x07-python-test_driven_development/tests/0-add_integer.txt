@@ -40,14 +40,13 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 >>> add_integer(78, False)
-        Traceback (most recent call last):
-        ...
-        TypeError: b must be an integer
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
 
-Checking bool with bool:
-        >>> add_integer(True, False)
-        Traceback (most recent call last):
-        ...
-        TypeError: a must be an integer
+>>> add_integer(True, False)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
 
 """
