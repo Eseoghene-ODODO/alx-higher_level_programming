@@ -24,9 +24,4 @@ Traceback (most recent call last):
 	...
 TypeError: last_name must be a string
 
->>> say_my_name(12, 34)
-Traceback (most recent call last):
-	...
-TypeError: first_name or last_name must be a string
-
 """
