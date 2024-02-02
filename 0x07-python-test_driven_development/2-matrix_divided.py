@@ -17,8 +17,8 @@ def matrix_divided(matrix, div):
     Returns:
         A new matrix representing the result of the division.
     """
-    if not isinstance(matrix, list) or matrix == [] or \
-            not all(isinstance(row, list) for row in matrix):
+    if not isinstance(matrix, list) \
+       or matrix == [] or not all(isinstance(row, list) for row in matrix):
         raise TypeError('matrix must be a matrix (list of lists) \
                         of integers/floats')
     if not all(len(row) == len(matrix[0]) for row in matrix):
