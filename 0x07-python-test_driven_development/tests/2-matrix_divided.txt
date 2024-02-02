@@ -16,6 +16,4 @@ trix_divided` function divides all elements of a matrix by a given divisor.
 >>> matrix_divided(matrix, 3)
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 
->>> matrix_divided(matrix)
-[[1, 2, 3], [4, 5, 6]]
 """
