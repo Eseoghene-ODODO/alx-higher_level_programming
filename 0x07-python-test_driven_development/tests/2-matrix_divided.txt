@@ -22,4 +22,5 @@ trix_divided` function divides all elements of a matrix by a given divisor.
 Traceback (most recent call last):
 	...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 """
