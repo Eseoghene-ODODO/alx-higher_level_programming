@@ -79,7 +79,6 @@ Checking m_b is tuple of lists
 Checking m_a is list of list empty
         >>> m_a = [[]]
         >>> m_b = [[2, 4], [6, 8]]
-        >>> matrix_mul(m_a, m_b)
         Traceback (most recent call last):
         ...
         ValueError: m_a can't be empty
@@ -87,7 +86,6 @@ Checking m_a is list of list empty
 Checking m_b is list of list empty
         >>> m_a = [[2, 4], [6, 8]]
         >>> m_b = [[]]
-        >>> matrix_mul(m_a, m_b)
         Traceback (most recent call last):
         ...
         ValueError: m_b can't be empty

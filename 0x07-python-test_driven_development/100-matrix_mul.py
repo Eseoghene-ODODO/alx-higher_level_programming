@@ -18,10 +18,10 @@ def matrix_mul(m_a, m_b):
     if not all(isinstance(row, list) for row in m_b):
         raise TypeError("m_b must be a list of lists")
 
-    if not m_a or not m_b or not all(m_a) or not all(m_b):
+    if not (m_a or all(m_a)):
         raise ValueError("m_a can't be empty")
 
-    if not all(m_a) or not all(m_b):
+    if not (m_b or all(m_b)):
         raise ValueError("m_b can't be empty")
 
     if not all(isinstance(element, (int, float))
