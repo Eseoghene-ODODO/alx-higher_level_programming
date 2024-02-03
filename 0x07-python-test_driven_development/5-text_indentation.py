@@ -5,7 +5,7 @@ after each of these characters: ., ? and :
 """
 
 
-def  text_indentation(text):
+def text_indentation(text):
     """ function body """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
