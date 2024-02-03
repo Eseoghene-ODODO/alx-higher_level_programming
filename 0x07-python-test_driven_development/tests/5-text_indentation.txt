@@ -1,0 +1,32 @@
+# 5-text_indentation.txt
+# ======================
+
+"""
+A function that printsa text with 2 new lines after each of this characters:
+., ? and :
+
+>>> from importlib import import_module
+
+>>> text_indentation = import_module('5-text_indentation').text_indentation
+
+>>> text_indentation("this is: a boy. right?")
+this is:
+a boy.
+right?
+
+>>> text_indentation(20)
+Traceback (most recent call last):
+	...
+TypeError: text must be a string
+
+>>> text_indentation()
+Traceback (most recent call last):
+	...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("this", "boy")
+Traceback (most recent call last):
+	...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+"""
