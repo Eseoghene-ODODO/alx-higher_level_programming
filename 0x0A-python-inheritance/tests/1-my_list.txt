@@ -22,3 +22,6 @@
 [2, -1, 0, -6, -4, 8, 3]
 >>> my_list.print_sorted()
 [-6, -4, -1, 0, 2, 3, 8]
+>>> my_list = MyList()
+>>> isinstance(my_list, list)
+True
