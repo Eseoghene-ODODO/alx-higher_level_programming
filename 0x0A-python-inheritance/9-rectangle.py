@@ -7,6 +7,9 @@ A class Rectangle that inherits from BaseGeometry (7-base_geometry.py)
 class BaseGeometry:
     """ class body """
 
+    def area(self):
+        """ method body """
+        raise Exception("area() is not implemented")
     def integer_validator(self, name, value):
         """ method body """
         if not isinstance(name, str):
@@ -35,4 +38,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """ method body """
-        return f"[Rectangle] {self.__width} / {self.__height}"
+        return f"[Rectangle] {self.__width}/{self.__height}"
