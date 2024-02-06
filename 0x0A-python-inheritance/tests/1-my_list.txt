@@ -23,5 +23,7 @@
 >>> my_list.print_sorted()
 [-6, -4, -1, 0, 2, 3, 8]
 >>> my_list = MyList()
->>> isinstance(my_list, list)
-True
+>>> my_list.print_sorted([0, 5, -20])
+Traceback (most recent call last):
+	...
+TypeError: print_sorted() takes 1 positional argument but 2 were given
