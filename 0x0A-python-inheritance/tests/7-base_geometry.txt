@@ -1,0 +1,26 @@
+# 7-base_geometry.txt
+# ===================
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+>>> bg(7, 9)
+Traceback (most recent call last):
+	...
+TypeError: __init__() takes 1 positional argument but 3 were given
+
+>>> bg.integer_validator("my_list", 12)
+>>> bg.integer_validator("width", 8)
+>>> big.integer_validator("zero", 0)
+Traceback (most recent call last):
+	...
+ValueError: zero must be greater than 0
+
+>>> bg.integer_validator("negative", -2)
+Traceback (most recent call last):
+	...
+ValueError: negative must be greater than 0
+
+>>> bg.area()
+Traceback
