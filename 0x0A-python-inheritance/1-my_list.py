@@ -13,6 +13,7 @@ class MyList(list):
             if not isinstance(element, int):
                 raise TypeError("elements must be an integer")
         return super().__init__(initial_list)
+
     def print_sorted(self):
         """ method body """
         sorted_list = sorted(self)
