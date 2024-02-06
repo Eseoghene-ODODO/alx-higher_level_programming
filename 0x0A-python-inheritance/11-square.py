@@ -21,4 +21,4 @@ class Square(Rectangle):
 
     def _str__(self):
         """method body """
-        return f"[Square.__name__] {self.__size}/{self.__size}"
+        return f"[{Square.__name__}] {self.__size}/{self.__size}"
