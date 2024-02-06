@@ -31,3 +31,7 @@ TypeError: print_sorted() takes 1 positional argument but 2 were given
 True
 >>> isinstance(my_list, list)
 True
+>>> my_list = MyList()
+>>> my_list.append(57)
+>>> my_list
+[57]
