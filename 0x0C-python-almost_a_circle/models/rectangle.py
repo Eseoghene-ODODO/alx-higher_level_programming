@@ -12,12 +12,11 @@ class Rectangle(Base):
     
     def __init__(self, width, height, x=0, y=0, id=None):
         """method body"""
-        super().__init__()
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
-        self.id = Rectangle.__nb_objects
 
     @property
     def width(self):
@@ -77,13 +76,41 @@ class Rectangle(Base):
 
     def area(self):
         """area body"""
-        return self.__width * self.__height
+        return self.width * self.height
 
     def display(self):
         """method body"""
+        for _ in range(self.__y):
+            print()
         for _ in range(self.__height):
-            print('#' * self.__width)
+            print(" " * self.__x + '#' * self.__width)
 
     def __str__(self):
         """method body"""
-        return f'[Rectangle] ({self.__id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}'
+        return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}'
+
+    def update(self, *args, **kwargs):
+        """update method"""
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
+        else:
+            for key, value in kwargs.items():
+                if key == 'id':
+                    self.id = value
+                elif key == 'width':
+                    self.width = value
+                elif key == 'height':
+                    self.height = value
+                elif key == 'x':
+                    self.x = value
+                elif key == 'y':
+                    self.y = value
