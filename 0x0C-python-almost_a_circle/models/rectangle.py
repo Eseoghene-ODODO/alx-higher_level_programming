@@ -114,3 +114,8 @@ class Rectangle(Base):
                     self.x = value
                 elif key == 'y':
                     self.y = value
+
+    def to_dictionary(self):
+        """method body"""
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        return {key: getattr(self, key) for key in attributes}
