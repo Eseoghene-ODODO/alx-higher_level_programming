@@ -6,7 +6,7 @@ A base class
 import json
 from os import path
 import csv
-import turtle
+#import turtle
 
 
 class Base:
