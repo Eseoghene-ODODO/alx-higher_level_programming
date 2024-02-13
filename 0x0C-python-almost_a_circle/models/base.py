@@ -96,7 +96,7 @@ class Base:
                     row[key] = int(row[key])
                 list_objs.append(cls.create(**row))
         return list_objs
-    
+
     @staticmethod
     def draw(list_rectangles, list_squares):
         screen = turtle.Screen()
