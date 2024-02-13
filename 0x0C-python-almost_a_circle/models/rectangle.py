@@ -9,7 +9,7 @@ from models.base import Base
 class Rectangle(Base):
     """class body"""
     __nb_objects = 0
-    
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """method body"""
         super().__init__(id)
@@ -87,7 +87,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """method body"""
-        return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}'
+        return f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
+                {self.__width}/{self.__height}'
 
     def update(self, *args, **kwargs):
         """update method"""
