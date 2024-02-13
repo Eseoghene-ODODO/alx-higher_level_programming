@@ -88,7 +88,7 @@ class Rectangle(Base):
     def __str__(self):
         """method body"""
         return (f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - '
-               f' {self.__width}/{self.__height}')
+                f' {self.__width}/{self.__height}')
 
     def update(self, *args, **kwargs):
         """update method"""
