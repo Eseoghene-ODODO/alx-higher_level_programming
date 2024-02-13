@@ -23,7 +23,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """method body"""
-        if list_dictionaries is None or list_dictionaries == []:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -39,7 +39,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """method body"""
-        if json_string is None or json_string is []:
+        if not json_string:
             return []
         return json.loads(json_string)
 
