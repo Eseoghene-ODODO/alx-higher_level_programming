@@ -4,6 +4,8 @@ A base class
 """
 
 import json
+from os import path
+import csv
 
 
 class Base:
@@ -21,7 +23,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """method body"""
-        if list_dictionaries == None or list_dictionaries == []:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -52,3 +54,44 @@ class Base:
             return None
         dummy_instance.update(**dictionary)
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances (convert json representations)"""
+        file_load = "{}.json".format(cls.__name__)
+        if not path.isfile(file_load):
+            return []
+        with open(file_load, "r", encoding="utf-8") as f:
+            return [cls.create(**dic)
+                    for dic in cls.from_json_string(f.read())]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Converts 'list_objs' to csv format"""
+        if not list_objs:
+            list_objs = []
+        with open("{}.csv".format(cls.__name__), 'w', encoding="utf-8") as fil:
+            if cls.__name__ == "Rectangle":
+                fields = ['id', 'width', 'height', 'x', 'y']
+            elif cls.__name__ == "Square":
+                fields = ['id', 'size', 'x', 'y']
+            writer = csv.DictWriter(fil, fieldnames=fields)
+            for obj in list_objs:
+                writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """method body"""
+        list_objs = []
+        with open("{}.csv".format(cls.__name__), 'r') as file_csv:
+            if cls.__name__ == "Rectangle":
+                fields = ['id', 'width', 'height', 'x', 'y']
+            elif cls.__name__ == "Square":
+                fields = ['id', 'size', 'x', 'y']
+            reader = csv.DictReader(file_csv, fieldnames=fields)
+            list_objs = []
+            for row in reader:
+                for key in row:
+                    row[key] = int(row[key])
+                list_objs.append(cls.create(**row))
+        return list_objs
