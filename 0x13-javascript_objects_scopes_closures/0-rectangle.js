@@ -1,10 +1,10 @@
 #!/usr/bin/node
-/*
- * An empty class Rectangle that defines a rectangle
+
+/**
+ * An empty class Rectangle that defines a rectangle:
+ * You must use the class notation for defining your class
  */
 
-
 class Rectangle {
-  // Empty class
 }
 module.exports = Rectangle;

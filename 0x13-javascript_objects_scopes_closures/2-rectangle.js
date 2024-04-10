@@ -1,6 +1,7 @@
 #!/usr/bin/node
-/*
- * A class Rectangle that defines a rectangle
+
+/**
+ * An empty class Rectangle that defines a rectangle:
  */
 
 class Rectangle {
