@@ -3,17 +3,20 @@
  * A class Rectangle that defines a rectangle
  */
 
-
 class Rectangle {
-	constructor(w, h) {
-		if (w < 1 && h < 1 || !Number.isInteger(w) && !Number.isInteger(h)) {
+  constructor (w, h) {
+    if (w === undefined || h === undefined || w <= 0 || h <= 0) {
+      // do nothing
+    } else {
+      this.width = w;
+      this.height = h;
+    }
+  }
 
-		}
-		this.width = w;
-		this.height = h;
-	}
-	print() {
-		return this.width * this.height;
-	}
+  print () {
+    for (let i = 0; i < this.height; i++) {
+      console.log('X'.repeat(this.width));
+    }
+  }
 }
 module.exports = Rectangle;
