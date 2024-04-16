@@ -10,6 +10,7 @@ from sqlalchemy.orm import sessionmaker
 from relationship_state import Base, State
 from relationship_city import City
 
+
 if __name__ == '__main__':
     """Create SQLAlchemy engine, session and connect to database"""
     username = sys.argv[1]
